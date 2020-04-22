@@ -87,7 +87,7 @@ function Patients(props) {
       case 'nationality':
         return (patient) => {
           return `patient-card ${
-            patient.nationality === 'India'
+            patient.nationality === 'Ethiopia'
               ? 'is-in'
               : patient.nationality === 'Myanmar'
               ? 'is-mm'

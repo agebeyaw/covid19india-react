@@ -45,7 +45,7 @@ function Home(props) {
 
   useEffectOnce(() => {
     axios
-      .get('https://api.covid19india.org/updatelog/log.json')
+      .get(process.env.REACT_APP_API_URL + '/api/updatelog/log.json')
       .then((response) => {
         const lastTimestamp = response.data
           .slice()
@@ -69,10 +69,12 @@ function Home(props) {
         {data: statesDailyResponse},
         {data: stateTestData},
       ] = await Promise.all([
-        axios.get('https://api.covid19india.org/data.json'),
-        axios.get('https://api.covid19india.org/state_district_wise.json'),
-        axios.get('https://api.covid19india.org/states_daily.json'),
-        axios.get('https://api.covid19india.org/state_test_data.json'),
+        axios.get(process.env.REACT_APP_API_URL + '/api/data.json'),
+        axios.get(
+          process.env.REACT_APP_API_URL + '/api/state_district_wise.json'
+        ),
+        axios.get(process.env.REACT_APP_API_URL + '/api/states_daily.json'),
+        axios.get(process.env.REACT_APP_API_URL + '/api/state_test_data.json'),
       ]);
 
       setStates(data.statewise);
@@ -169,7 +171,7 @@ function Home(props) {
           {fetched && (
             <React.Fragment>
               <MapExplorer
-                mapMeta={MAP_META.India}
+                mapMeta={MAP_META.Ethiopia}
                 states={states}
                 stateDistrictWiseData={stateDistrictWiseData}
                 stateTestData={stateTestData}

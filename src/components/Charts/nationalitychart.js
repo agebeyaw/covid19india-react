@@ -39,7 +39,7 @@ function NationalityChart(props) {
     nationality[patient.nationality.toLowerCase()]++;
   });
 
-  // delete nationality.india;
+  // delete nationality.Ethiopia;
   const data = [];
   const labels = [];
 

@@ -27,9 +27,9 @@ function DeepDive(props) {
         rawDataResponse,
         stateDailyResponse,
       ] = await Promise.all([
-        axios.get('https://api.covid19india.org/data.json'),
-        axios.get('https://api.covid19india.org/raw_data.json'),
-        axios.get('https://api.covid19india.org/states_daily.json'),
+        axios.get(process.env.REACT_APP_API_URL + '/api/data.json'),
+        axios.get(process.env.REACT_APP_API_URL + '/api/raw_data.json'),
+        axios.get(process.env.REACT_APP_API_URL + '/api/states_daily.json'),
       ]);
       setTimeseries(response.data.cases_time_series);
       setStatesTimeSeries(stateDailyResponse.data.states_daily);
@@ -45,14 +45,14 @@ function DeepDive(props) {
       <section className="cards">
         <div className="card fadeInUp" style={{animationDelay: '0.7s'}}>
           <TotalConfirmedChart
-            title="India - Total Cases"
+            title="Ethiopia - Total Cases"
             timeseries={timeseries}
           />
         </div>
 
         <div className="card fadeInUp" style={{animationDelay: '0.7s'}}>
           <DailyConfirmedChart
-            title="India - Daily Cases"
+            title="Ethiopia - Daily Cases"
             timeseries={timeseries}
           />
         </div>

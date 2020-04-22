@@ -70,7 +70,7 @@ function Clusters({stateCode}) {
     async function getData() {
       try {
         const rawDataResponse = await axios.get(
-          'https://api.covid19india.org/raw_data.json'
+          process.env.REACT_APP_API_URL + '/api/raw_data.json'
         );
         setStateRawData(
           rawDataResponse.data.raw_data.filter((d) => d.statecode === stateCode)

@@ -120,7 +120,7 @@ function MapExplorer({
 
     const isState = !('district' in regionHighlighted);
     if (isState) {
-      const newMap = MAP_META['India'];
+      const newMap = MAP_META['Ethiopia'];
       setCurrentMap(newMap);
       const region = getRegionFromState(regionHighlighted.state);
       setHoveredRegion(region.name, newMap);
@@ -148,7 +148,7 @@ function MapExplorer({
         setHoveredRegion(states[0].state, newMap);
       } else if (newMap.mapType === MAP_TYPES.STATE) {
         const {districtData} = stateDistrictWiseData[name] || {};
-        const topDistrict = Object.keys(districtData)
+        const topDistrict = Object.keys(districtData || [])
           .filter((name) => name !== 'Unknown')
           .sort((a, b) => {
             return districtData[b].confirmed - districtData[a].confirmed;
@@ -194,8 +194,8 @@ function MapExplorer({
         <h1>{currentMap.name} Map</h1>
         <h6>
           {window.innerWidth <= 769 ? 'Tap' : 'Hover'} over a{' '}
-          {currentMap.mapType === MAP_TYPES.COUNTRY ? 'state/UT' : 'district'}{' '}
-          for more details
+          {currentMap.mapType === MAP_TYPES.COUNTRY ? 'state' : 'district'} for
+          more details
         </h6>
       </div>
 
@@ -318,7 +318,7 @@ function MapExplorer({
         {currentMap.mapType === MAP_TYPES.STATE ? (
           <div
             className="button back-button"
-            onClick={() => switchMapToState('India')}
+            onClick={() => switchMapToState('Ethiopia')}
           >
             Back
           </div>

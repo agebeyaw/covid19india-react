@@ -94,7 +94,9 @@ function Resources(props) {
   const getResources = async () => {
     try {
       const [response] = await Promise.all([
-        axios.get('https://api.covid19india.org/resources/resources.json'),
+        axios.get(
+          process.env.REACT_APP_API_URL + '/api/resources/resources.json'
+        ),
       ]);
       // console.log(response)
       // console.log("Column names are")
@@ -338,15 +340,15 @@ function Resources(props) {
       }
     }
     try {
-      if ('PAN India' in resourcedict) {
-        resourcedict['PAN India']['Multiple']['CoVID-19 Testing Lab'].forEach(
-          (element) => {
-            a.push(element);
-          }
-        );
+      if ('PAN Ethiopia' in resourcedict) {
+        resourcedict['PAN Ethiopia']['Multiple'][
+          'CoVID-19 Testing Lab'
+        ].forEach((element) => {
+          a.push(element);
+        });
       }
     } catch (err) {
-      // console.log('No PAN India row found');
+      // console.log('No PAN Ethiopia row found');
     }
     setData(a);
     setPartData(a.slice(0, 30));

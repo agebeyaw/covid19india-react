@@ -38,7 +38,7 @@ const essentialsEngine = new Bloodhound({
   ),
   indexRemote: true,
   remote: {
-    url: 'https://api.covid19india.org/resources/resources.json',
+    url: process.env.REACT_APP_API_URL + '/api/resources/resources.json',
     transform: function (response) {
       return response.resources;
     },

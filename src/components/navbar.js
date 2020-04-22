@@ -25,7 +25,7 @@ function Navbar({pages, darkMode, setDarkMode}) {
       </div>
       <div className="navbar-middle">
         <Link to="/">
-          Covid19<span>India</span>
+          Covid19<span>Ethiopia</span>
         </Link>
       </div>
 

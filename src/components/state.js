@@ -51,11 +51,13 @@ function State(props) {
         {data: stateTestResponse},
         {data: sourcesResponse},
       ] = await Promise.all([
-        axios.get('https://api.covid19india.org/data.json'),
-        axios.get('https://api.covid19india.org/state_district_wise.json'),
-        axios.get('https://api.covid19india.org/states_daily.json'),
-        axios.get('https://api.covid19india.org/state_test_data.json'),
-        axios.get('https://api.covid19india.org/sources_list.json'),
+        axios.get(process.env.REACT_APP_API_URL + '/api/data.json'),
+        axios.get(
+          process.env.REACT_APP_API_URL + '/api/state_district_wise.json'
+        ),
+        axios.get(process.env.REACT_APP_API_URL + '/api/states_daily.json'),
+        axios.get(process.env.REACT_APP_API_URL + '/api/state_test_data.json'),
+        axios.get(process.env.REACT_APP_API_URL + '/api/sources_list.json'),
       ]);
       const states = dataResponse.statewise;
       setStateData(states.find((s) => s.statecode === code));
