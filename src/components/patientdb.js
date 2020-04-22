@@ -279,8 +279,8 @@ function PatientDB(props) {
 
           {colorMode === 'nationality' && (
             <div className="legend-left nationality">
-              <div className="circle is-in"></div>
-              <h5 className="is-in">In</h5>
+              <div className="circle is-et"></div>
+              <h5 className="is-et">Et</h5>
               <div className="circle is-uk"></div>
               <h5 className="is-uk">Uk</h5>
               <div className="circle is-us"></div>
@@ -322,7 +322,7 @@ function PatientDB(props) {
 
       <div className="header fadeInUp" style={{animationDelay: '0.3s'}}>
         <div>
-          <h1>Demographics</h1>
+          <h1>Patient List</h1>
 
           <div className="deep-dive">
             <h5>Expand</h5>
@@ -352,14 +352,20 @@ function PatientDB(props) {
           }}
         />
         <p>
-          It is important that we do not think of these as just tiny boxes,
-          numbers, or just another part of statistics - among these are our
-          neighbors, our teachers, our healthcare workers, our supermarket
-          vendors, our friends, our co-workers, our children or our
-          grandparents.
+          Among these are our neighbors, our teachers, our healthcare workers,
+          our friends, our co-workers, our children or our grandparents. Among
+          these are our people!
           <br />
           <br />
-          Among these are our people.
+          Join{' '}
+          <a
+            href="https://ethiopia-covid19.slack.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ethiopia COVID-19 Response Team
+          </a>{' '}
+          via slack and find out how you can contribute
         </p>
       </div>
 

@@ -41,9 +41,9 @@ function DailyConfirmedChart(props) {
     labels: dates,
     datasets: [
       {
-        data: confirmed,
-        label: 'Confirmed',
-        backgroundColor: '#ff073a',
+        data: deceased,
+        label: 'Deceased',
+        backgroundColor: '#6c757d',
       },
       {
         data: recovered,
@@ -51,9 +51,9 @@ function DailyConfirmedChart(props) {
         backgroundColor: '#28a745',
       },
       {
-        data: deceased,
-        label: 'Deceased',
-        backgroundColor: '#6c757d',
+        data: confirmed,
+        label: 'Confirmed',
+        backgroundColor: '#ff073a',
       },
     ],
   };

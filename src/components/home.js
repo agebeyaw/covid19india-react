@@ -37,7 +37,7 @@ function Home(props) {
   );
   const [newUpdate, setNewUpdate] = useLocalStorage('newUpdate', false);
 
-  useFavicon(newUpdate ? '/icon_update.png' : '/favicon.ico');
+  useFavicon('/favicon.ico');
 
   useEffectOnce(() => {
     getStates();

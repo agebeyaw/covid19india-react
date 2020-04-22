@@ -218,27 +218,13 @@ function Search(props) {
                 <h4
                   onMouseDown={(event) => {
                     event.preventDefault();
-                    setNativeValue(searchInput.current, 'Testing Pune');
+                    setNativeValue(searchInput.current, 'Call centers');
                     searchInput.current.dispatchEvent(
                       new Event('input', {bubbles: true})
                     );
                   }}
                 >
-                  Testing Pune
-                </h4>
-              </div>
-              <div className="suggestion">
-                <div>-</div>
-                <h4
-                  onMouseDown={(event) => {
-                    event.preventDefault();
-                    setNativeValue(searchInput.current, 'Delhi Shelter');
-                    searchInput.current.dispatchEvent(
-                      new Event('input', {bubbles: true})
-                    );
-                  }}
-                >
-                  Delhi Shelter
+                  Call centers
                 </h4>
               </div>
               <div className="suggestion">
@@ -248,14 +234,14 @@ function Search(props) {
                     event.preventDefault();
                     setNativeValue(
                       searchInput.current,
-                      'Community Kitchen in Kerala'
+                      'Free food and groceries'
                     );
                     searchInput.current.dispatchEvent(
                       new Event('input', {bubbles: true})
                     );
                   }}
                 >
-                  Community Kitchen in Kerala
+                  Free food and groceries
                 </h4>
               </div>
               <div className="suggestion">
@@ -263,13 +249,13 @@ function Search(props) {
                 <h4
                   onMouseDown={(event) => {
                     event.preventDefault();
-                    setNativeValue(searchInput.current, 'Groceries Chennai');
+                    setNativeValue(searchInput.current, 'Delivery Service');
                     searchInput.current.dispatchEvent(
                       new Event('input', {bubbles: true})
                     );
                   }}
                 >
-                  Groceries Chennai
+                  Delivery Service
                 </h4>
               </div>
               <div className="suggestion">
@@ -277,16 +263,13 @@ function Search(props) {
                 <h4
                   onMouseDown={(event) => {
                     event.preventDefault();
-                    setNativeValue(
-                      searchInput.current,
-                      'Senior citizen support bangalore'
-                    );
+                    setNativeValue(searchInput.current, 'Hospitals');
                     searchInput.current.dispatchEvent(
                       new Event('input', {bubbles: true})
                     );
                   }}
                 >
-                  Senior citizen support bangalore
+                  Hospitals
                 </h4>
               </div>
             </div>
@@ -299,13 +282,13 @@ function Search(props) {
                 <h4
                   onMouseDown={(event) => {
                     event.preventDefault();
-                    setNativeValue(searchInput.current, 'Hyderabad');
+                    setNativeValue(searchInput.current, 'Addis Abeba');
                     searchInput.current.dispatchEvent(
                       new Event('input', {bubbles: true})
                     );
                   }}
                 >
-                  Hyderabad
+                  Addis Abeba
                 </h4>
               </div>
               <div className="suggestion">
@@ -313,13 +296,13 @@ function Search(props) {
                 <h4
                   onMouseDown={(event) => {
                     event.preventDefault();
-                    setNativeValue(searchInput.current, 'Karnataka');
+                    setNativeValue(searchInput.current, 'Amhara');
                     searchInput.current.dispatchEvent(
                       new Event('input', {bubbles: true})
                     );
                   }}
                 >
-                  Karnataka
+                  Amhara
                 </h4>
               </div>
               <div className="suggestion">
@@ -327,13 +310,13 @@ function Search(props) {
                 <h4
                   onMouseDown={(event) => {
                     event.preventDefault();
-                    setNativeValue(searchInput.current, 'Chennai');
+                    setNativeValue(searchInput.current, 'Oromia');
                     searchInput.current.dispatchEvent(
                       new Event('input', {bubbles: true})
                     );
                   }}
                 >
-                  Chennai
+                  Oromia
                 </h4>
               </div>
               <div className="suggestion">
@@ -341,27 +324,13 @@ function Search(props) {
                 <h4
                   onMouseDown={(event) => {
                     event.preventDefault();
-                    setNativeValue(searchInput.current, 'Jharkhand');
+                    setNativeValue(searchInput.current, 'Dire Dawa');
                     searchInput.current.dispatchEvent(
                       new Event('input', {bubbles: true})
                     );
                   }}
                 >
-                  Jharkhand
-                </h4>
-              </div>
-              <div className="suggestion">
-                <div>-</div>
-                <h4
-                  onMouseDown={(event) => {
-                    event.preventDefault();
-                    setNativeValue(searchInput.current, 'Alappuzha');
-                    searchInput.current.dispatchEvent(
-                      new Event('input', {bubbles: true})
-                    );
-                  }}
-                >
-                  Alappuzha
+                  Dire Dawa
                 </h4>
               </div>
             </div>

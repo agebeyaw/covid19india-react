@@ -125,7 +125,7 @@ function Table(props) {
                 onClick={(e) => handleSort(e, props)}
               >
                 <div className="heading-content">
-                  <abbr title="State">State/UT</abbr>
+                  <abbr title="State">State</abbr>
                   <div
                     style={{
                       display:
@@ -293,7 +293,7 @@ function Table(props) {
           </tbody>
         </table>
         <h5 className="table-fineprint fadeInUp" style={{animationDelay: '1s'}}>
-          {count} States/UTS Affected
+          {count} States Affected
         </h5>
       </React.Fragment>
     );

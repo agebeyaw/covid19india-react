@@ -392,7 +392,7 @@ function Resources(props) {
 
   const openSharingLink = function (message) {
     const shareUri = `https://www.addtoany.com/share#url=${encodeURI(
-      'https://www.covid19india.org/essentials'
+      'https://covid19.qulph.com/essentials'
     )}&title=${encodeURI(message)}`;
 
     const h = 500;
@@ -422,7 +422,7 @@ function Resources(props) {
         .share({
           title: document.title,
           text: message,
-          url: 'https://www.covid19india.org/essentials',
+          url: 'https://covid19.qulph.com/essentials',
         })
         .then()
         .catch((error) => console.log(error));
@@ -499,7 +499,7 @@ function Resources(props) {
                   </p>
                 </h6>
               </Popover>
-              <a
+              {/*        <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfquevp7_rdgdEoDgTdimWwTXO3B9TjFEAm3DbrMDXxCiuwuA/viewform"
                 className="button add-entry is-purple"
                 target="_blank"
@@ -516,7 +516,7 @@ function Resources(props) {
                 style={{margin: '0.2rem 0.2rem', padding: '0.5rem 0.5rem'}}
               >
                 <span>Feedback</span>
-              </a>
+              </a>*/}
             </div>
             <div className="resourcefilters">
               <FormControl
@@ -529,7 +529,7 @@ function Resources(props) {
                   id="demo-simple-select-outlined-label"
                   classes={{root: classesInputLabel.root}}
                 >
-                  State/UT
+                  State
                 </InputLabel>
                 <Select
                   native
@@ -538,7 +538,7 @@ function Resources(props) {
                   value={indianstate}
                   onChange={changeIndianState}
                   defaultValue="all"
-                  label="State/UT"
+                  label="State"
                   classes={{root: classesMenuItem.root}}
                 >
                   <option value="all" classes={{root: classesMenuItem.root}}>
@@ -718,7 +718,7 @@ function Resources(props) {
                   id="demo-simple-select-outlined-label"
                   classes={{root: classesInputLabel.root}}
                 >
-                  State/UT
+                  State
                 </InputLabel>
                 <Select
                   native
@@ -727,7 +727,7 @@ function Resources(props) {
                   value={indianstate}
                   onChange={changeIndianState}
                   defaultValue="all"
-                  label="State/UT"
+                  label="State"
                   classes={{root: classesMenuItem.root}}
                 >
                   <option value="all" classes={{root: classesMenuItem.root}}>
@@ -812,7 +812,7 @@ function Resources(props) {
                 marginBottom: '0.6rem',
               }}
             >
-              <a
+              {/*    <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfquevp7_rdgdEoDgTdimWwTXO3B9TjFEAm3DbrMDXxCiuwuA/viewform"
                 className="button add-entry is-purple"
                 target="_blank"
@@ -829,7 +829,7 @@ function Resources(props) {
                 style={{margin: '0rem 0.2rem', padding: '0.1rem 0.5rem'}}
               >
                 <span>Feedback</span>
-              </a>
+              </a>*/}
               <button
                 onClick={openSharingTray}
                 className="button add-entry is-purple"
