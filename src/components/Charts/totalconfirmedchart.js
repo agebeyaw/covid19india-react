@@ -6,6 +6,7 @@ function TotalConfirmedChart(props) {
   const dates = [];
   const confirmed = [];
   const recovered = [];
+  const active = [];
   const deceased = [];
 
   defaults.global.elements.line.fill = false;
@@ -32,12 +33,13 @@ function TotalConfirmedChart(props) {
   }
 
   props.timeseries.forEach((data, index) => {
-    if (index >= 31) {
-      dates.push(moment(data.date.trim(), 'DD MMM'));
-      confirmed.push(data.totalconfirmed);
-      recovered.push(data.totalrecovered);
-      deceased.push(data.totaldeceased);
-    }
+    // if (index >= 31) {
+    dates.push(moment(data.date.trim(), 'DD MMM'));
+    active.push(data.totalconfirmed - data.totalrecovered - data.totaldeceased);
+    confirmed.push(data.totalconfirmed);
+    recovered.push(data.totalrecovered);
+    deceased.push(data.totaldeceased);
+    // }
   });
 
   const dataset = {
@@ -50,6 +52,15 @@ function TotalConfirmedChart(props) {
         pointBackgroundColor: '#ff073a',
         label: 'Confirmed',
         borderColor: '#ff073a',
+        pointHoverRadius: 2,
+      },
+      {
+        borderWidth: 2,
+        data: active,
+        borderCapStyle: 'round',
+        pointBackgroundColor: '#2ABAFF',
+        label: 'Active',
+        borderColor: '#2ABAFF',
         pointHoverRadius: 2,
       },
       {

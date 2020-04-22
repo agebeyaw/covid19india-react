@@ -4,6 +4,7 @@ import DailyConfirmedChart from './Charts/dailyconfirmedchart';
 import GenderChart from './Charts/genderchart';
 import NationalityChart from './Charts/nationalitychart';
 import TotalConfirmedChart from './Charts/totalconfirmedchart';
+import TravelChart from './Charts/travelchart';
 
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
@@ -74,6 +75,10 @@ function DeepDive(props) {
 
         <div className="card fadeInUp" style={{animationDelay: '0.7s'}}>
           <NationalityChart title="Patient Nationality" data={rawData} />
+        </div>
+
+        <div className="card fadeInUp" style={{animationDelay: '0.7s'}}>
+          <TravelChart title="Recent Travel Country" data={rawData} />
         </div>
       </section>
     </div>

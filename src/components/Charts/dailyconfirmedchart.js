@@ -31,19 +31,20 @@ function DailyConfirmedChart(props) {
   }
 
   props.timeseries.forEach((data, index) => {
-    if (index >= 31) {
-      dates.push(moment(data.date.trim(), 'DD MMM').format('DD MMM'));
-      confirmed.push(
-        data.dailyconfirmed - data.dailyrecovered - data.dailydeceased
-      );
-      recovered.push(data.dailyrecovered);
-      deceased.push(data.dailydeceased);
-    }
+    dates.push(moment(data.date.trim(), 'DD MMM').format('DD MMM'));
+    confirmed.push(data.dailyconfirmed);
+    recovered.push(data.dailyrecovered);
+    deceased.push(data.dailydeceased);
   });
 
   const barDataSet = {
     labels: dates,
     datasets: [
+      {
+        data: confirmed,
+        label: 'Confirmed',
+        backgroundColor: '#ff073a',
+      },
       {
         data: recovered,
         label: 'Recovered',
@@ -53,11 +54,6 @@ function DailyConfirmedChart(props) {
         data: deceased,
         label: 'Deceased',
         backgroundColor: '#6c757d',
-      },
-      {
-        data: confirmed,
-        label: 'Active',
-        backgroundColor: '#ff073a',
       },
     ],
   };
